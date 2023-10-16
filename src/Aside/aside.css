@@ -1,0 +1,34 @@
+.container {
+  flex-basis: 25%;
+  border-radius: 10px;
+  min-height: 70vh;
+  background-image: url('../assets/images/bg-sidebar-desktop.svg');
+  background-size: cover;
+  object-fit: cover;
+}
+.list {
+  padding: 15px;
+  padding-top: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+p.link {
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  padding: 10px;
+  color: hsl(0, 0%, 100%);
+}
+p.link:hover {
+  color: black;
+  background-color: hsl(217, 100%, 97%);
+}
+.head5 {
+  color: hsl(231, 11%, 63%);
+  margin: 2px;
+}
+
+.sideName {
+  color: hsl(229, 24%, 87%);
+  margin: 2px;
+}

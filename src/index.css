@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +14,240 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 16px;
+  height: 70vh;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1400px;
+  background-color: hsl(206, 94%, 87%);
+  font-size: 1rem;
 }
+main {
+  display: flex;
+  gap: 7%;
+  margin: 10px;
+  margin-top: 20px;
+  margin: 0 auto;
+  padding: 30px;
+  width: 80%;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* 
+
+
+.list-content-text h5 {
+  
+}
+.list-content-text p {
+ 
+} */
+.wrapper {
+  flex-basis: 65%;
+  padding: 20px;
+  padding-top: 15px;
+}
+/* .cont2 {
+  padding: 5px;
+  width: fit-content;
+} */
+.head {
+  margin-top: 5px;
+  padding-top: 5px;
+}
+.head h2 {
+  margin: 10px 0px;
+  padding-top: 5px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+form {
+  margin-top: 35px;
+}
+.input {
+  margin: 15px;
+  margin-left: 0;
+}
+.input input {
+  margin-top: 5px;
+  width: 98%;
+  padding: 10px;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  color: black;
+}
+
+.btn {
+  margin-top: 30px;
+  position: relative;
+}
+.btn button {
+  position: absolute;
+  right: 0;
+  color: white;
+  background-color: hsl(213, 96%, 18%);
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.btn button a {
+  text-decoration: none;
+  color: white;
+}
+#go {
+  border: 1px solid hsl(217, 100%, 97%);
+  left: 0%;
+  background-color: white;
+  color: hsl(231, 11%, 63%);
+}
+#go a {
+  text-decoration: none;
+  color: hsl(231, 11%, 63%);
+}
+
+/* for purplish blue */
+.pblue {
+  color: hsl(243, 100%, 62%);
+}
+
+/* for marine blue */
+.mblue {
+  color: hsl(213, 96%, 18%);
+}
+.thanks {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 60px;
+  margin: 0 auto;
+}
+.thanks img {
+  margin: 10px;
+}
+.thanks h3 {
+  margin: 10px;
+}
+.text {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* @media (max-width: 600px) {
+  body {
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+  }
+  main {
+    background-color: hsl(206, 94%, 87%);
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    position: relative;
+  }
+  .container {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    padding-left: 70px;
+    padding-right: 60px;
+    border-radius: 0px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('../assets/images/bg-sidebar-mobile.svg'); */
+/*    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .list {
+    flex-basis: 10%;
+    margin: 0 auto;
+    width: 70vw;
+    font-size: 1.5rem;
+    padding: 0px 20px;
+  }
+  .list-content {
+    display: inline-flex;
+  }
+  .list-content-text {
+    display: none;
+  }
+  .list-content-link {
+    display: inline;
+  }
+  .list-content-link a {
+    display: inline;
+  }
+  .list-content-link a:hover {
+    color: black;
+    background-color: hsl(217, 100%, 97%);
+  }
+
+  .wrapper {
+    width: 90vw;
+    margin: 10px;
+    padding: 15px;
+    margin: 0 auto;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .btn {
+    position: fixed;
+    background-color: white;
+    right: 5%;
+    bottom: 20%;
+  }
+  #go {
+    position: fixed;
+    left: 5%;
+  }
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 0px;
+  }
+  .plan-item {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .plan-item h3,
+  .plan-item p {
+    margin: 0px 10px;
+    text-align: center;
+  }
+  .select-plan div {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .plan-item img {
+    margin: 0;
+    padding: 0;
+  }
+  .add-ons {
+    padding-bottom: 50px;
+    padding: 10px;
+  }
+  .add-item {
+    width: 95%;
+  }
+  .sum {
+    width: 80%;
+  }
+} */

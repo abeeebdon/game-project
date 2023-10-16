@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom'
+import './App.css'
+import Home from './Components/Home'
+import Main from './Aside/Main'
+import Pick from './Components/Pick'
+import SelectPlan from './Components/SelectPlan'
+import Finish from './Components/Finish'
+import Error from './Components/Error'
+import Yearly from './Components/Yearly'
+import Monthly from './Components/Monthly'
+import Summary from './Components/Summary'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main>
+      <Main />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/select" element={<SelectPlan />}>
+          <Route index element={<Monthly />} />
+          <Route path="monthly" element={<Monthly />} />
+          <Route path="yearly" element={<Yearly />} />
+        </Route>
+        <Route path="/pick" element={<Pick />} />
+        <Route path="/pick/summary" element={<Summary />} />
+        <Route path="/summary" element={<Summary />} />
+        <Route path="/finish" element={<Finish />} />
+
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </main>
+  )
 }
 
-export default App;
+export default App
