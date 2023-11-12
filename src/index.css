@@ -24,8 +24,6 @@ body {
 main {
   display: flex;
   gap: 7%;
-  margin: 10px;
-  margin-top: 20px;
   margin: 0 auto;
   padding: 30px;
   width: 80%;
@@ -34,24 +32,12 @@ main {
   border-radius: 10px;
 }
 
-/* 
-
-
-.list-content-text h5 {
-  
-}
-.list-content-text p {
- 
-} */
 .wrapper {
   flex-basis: 65%;
   padding: 20px;
   padding-top: 15px;
 }
-/* .cont2 {
-  padding: 5px;
-  width: fit-content;
-} */
+
 .head {
   margin-top: 5px;
   padding-top: 5px;

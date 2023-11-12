@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import Input from './Input'
 import { inputs } from '../Data'
+import Input from './Input'
 const Home = () => {
   return (
     <div className="wrapper">
@@ -16,13 +16,13 @@ const Home = () => {
             </div>
           )
         })}
-        <NavLink to="/select">
-          <div className="btn">
+        <div className="btn">
+          <NavLink to="/select">
             <button type="button" className="button">
               Next Step
             </button>
-          </div>
-        </NavLink>
+          </NavLink>
+        </div>
       </form>
     </div>
   )

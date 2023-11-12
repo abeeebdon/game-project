@@ -13,13 +13,16 @@
   gap: 15px;
   align-items: center;
 }
-p.link {
+a {
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 50%;
-  padding: 10px;
+  margin-left: 0.5rem;
+  padding: 1rem;
   color: hsl(0, 0%, 100%);
 }
-p.link:hover {
+
+a:hover,
+a.active {
   color: black;
   background-color: hsl(217, 100%, 97%);
 }
