@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './Home/Home'
 import Main from './Aside/Main'
-import Pick from './Components/Pick'
+import Pick from './section3/Pick'
 import SelectPlan from './section2/SelectPlan'
 import Finish from './Components/Finish'
 import Error from './Components/Error'

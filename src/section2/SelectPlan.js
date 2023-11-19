@@ -10,7 +10,10 @@ const SelectPlan = () => {
   }, [])
   return (
     <div className="wrapper">
-      <Head />
+      <Head
+        head="Select your plan"
+        paragraph="You have the option of monthly or yearly billing"
+      />
       <div className="plan">
         {plans.map((card) => {
           return (

@@ -1,13 +1,15 @@
 import { NavLink } from 'react-router-dom'
 import { inputs } from '../Data'
 import Input from './Input'
+import Head from '../Components/Head'
 const Home = () => {
   return (
     <div className="wrapper">
-      <div className="head">
-        <h2>Personal Information</h2>
-        <p>Please provide your name, email address, and phone number.</p>
-      </div>
+      <Head
+        head="Personal Information"
+        paragraph="Please provide your name, email address, and phone number"
+      />
+
       <form>
         {inputs.map((input) => {
           return (
