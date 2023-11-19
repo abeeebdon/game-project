@@ -1,6 +1,5 @@
 import Head from '../Components/Head'
 import { picks } from '../Data'
-import checkmark from '../assets/images/icon-checkmark.svg'
 import { useNavigate } from 'react-router-dom'
 import Card from './Card'
 
