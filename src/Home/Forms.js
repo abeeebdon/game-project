@@ -1,4 +1,7 @@
+import { Link, useNavigate } from 'react-router-dom'
 const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
+  const navigate = useNavigate()
+
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-row">
@@ -40,7 +43,11 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
         />
       </div>
       <div className="btn">
-        <button type="submit" className="button">
+        <button
+          type="submit"
+          className="button"
+          onClick={() => navigate('select')}
+        >
           Next Step
         </button>
       </div>
