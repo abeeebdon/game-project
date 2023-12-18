@@ -6,13 +6,39 @@ import SelectPlan from './section2/SelectPlan'
 import Finish from './Components/Finish'
 import Error from './Components/Error'
 import Summary from './Components/Summary'
+import { useState } from 'react'
 
 function App() {
+  const [user, setUser] = useState({
+    name: '',
+    email: '',
+    phoneNumber: '',
+  })
+
+  const handleChange = (e) => {
+    const updatedUsers = { ...user, [e.target.name]: e.target.value }
+    setUser(updatedUsers)
+  }
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('You clicked')
+    console.log(user)
+  }
   return (
     <main>
       <Main />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Home
+              handleSubmit={handleSubmit}
+              handleChange={handleChange}
+              user={user}
+              setUser={setUser}
+            />
+          }
+        />
         <Route path="/select" element={<SelectPlan />} />
         <Route path="/pick" element={<Pick />} />
         <Route path="/pick/summary" element={<Summary />} />

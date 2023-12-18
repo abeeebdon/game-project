@@ -62,24 +62,3 @@ export const picks = [
     paragraph: 'Custom theme on your profile',
   },
 ]
-
-export const inputs = [
-  {
-    id: 1,
-    label: 'Name',
-    identity: 'text',
-    placeholder: 'e.g. Stephen King',
-  },
-  {
-    id: 2,
-    label: 'Email',
-    identity: 'e-mail',
-    placeholder: 'e.g. king@gmail.com',
-  },
-  {
-    id: 3,
-    label: 'Phone Number',
-    identity: 'phone-number',
-    placeholder: 'e.g. +1 234 567 890',
-  },
-]
