@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
   const navigate = useNavigate()
 
@@ -14,6 +14,7 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           placeholder="e.g. Stephen King"
           value={user.name}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="form-row">
@@ -27,6 +28,7 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           placeholder="e.g. king@gmail.com"
           value={user.email}
           onChange={handleChange}
+          required
         />
       </div>
       <div className="form-row">
@@ -39,6 +41,7 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           className="input"
           placeholder="e.g. +1 234 567 890"
           value={user.phoneNumber}
+          required
           onChange={handleChange}
         />
       </div>
@@ -46,7 +49,7 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
         <button
           type="submit"
           className="button"
-          onClick={() => navigate('select')}
+          onClick={() => navigate('/select')}
         >
           Next Step
         </button>

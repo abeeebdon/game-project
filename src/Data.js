@@ -7,18 +7,21 @@ export const monthPlan = [
     image: img1,
     plan: 'Arcade',
     amount: '$9/mo',
+    duration: 'monthly',
   },
   {
     id: 2,
     image: img2,
     plan: 'Advanced',
     amount: '$12/mo',
+    duration: 'monthly',
   },
   {
     id: 3,
     image: img3,
     plan: 'Pro',
     amount: '$15/mo',
+    duration: 'monthly',
   },
 ]
 
@@ -29,18 +32,21 @@ export const yearplan = [
     image: img1,
     plan: 'Arcade',
     amount: '$90/yr',
+    duration: 'yearly',
   },
   {
     id: 2,
     image: img2,
     plan: 'Advanced',
     amount: '$120/yr',
+    duration: 'yearly',
   },
   {
     id: 3,
     image: img3,
     plan: 'Pro',
     amount: '$150/yr',
+    duration: 'yearly',
   },
 ]
 

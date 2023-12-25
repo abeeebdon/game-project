@@ -13,6 +13,8 @@ function App() {
     name: '',
     email: '',
     phoneNumber: '',
+    duration: '',
+    plan: '',
   })
 
   const handleChange = (e) => {
@@ -39,7 +41,10 @@ function App() {
             />
           }
         />
-        <Route path="/select" element={<SelectPlan />} />
+        <Route
+          path="/select"
+          element={<SelectPlan user={user} setUser={setUser} />}
+        />
         <Route path="/pick" element={<Pick />} />
         <Route path="/pick/summary" element={<Summary />} />
         <Route path="/summary" element={<Summary />} />

@@ -1,12 +1,15 @@
-import checkmark from '../assets/images/icon-checkmark.svg'
-
 const Card = ({ pick }) => {
-  const { text, paragraph } = pick
+  const { text, paragraph, id } = pick
+
+  const handleCheck = (e) => {
+    console.log('checked')
+    console.log(e.target.value)
+  }
 
   return (
     <div className="add-item">
       <button className="check">
-        <img src={checkmark} alt="img" />
+        <input type="checkbox" onChange={(e) => handleCheck(e)} />
       </button>
       <div className="text">
         <h3 className="mblue">{text}</h3>
