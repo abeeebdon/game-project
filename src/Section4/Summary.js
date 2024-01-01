@@ -1,34 +1,36 @@
 import { useNavigate } from 'react-router-dom'
-const Summary = () => {
+import Head from '../Head'
+import './summary.css'
+const Summary = ({ user }) => {
+  const { plan, planPrice, pick } = user
   const navigate = useNavigate()
   return (
     <div className="wrapper">
-      <div className="head">
-        <h2>Finishing up</h2>
-        <p>Double-check everything looks OK before confirming</p>
-      </div>
+      <Head
+        head="Finishing Up"
+        paragraph="Double-check everything looks OK before confirming"
+      />
       <div className="sum-content">
         <div className="sum">
           <div className="sum-text">
-            <h3>Arcade (Monthly)</h3>
-            <p>Change</p>
+            <h3>{plan}</h3>
+            <button className="btn-change">Change</button>
           </div>
-          <div className="sum-price">$9/mo</div>
+          <div className="sum-price">{planPrice}</div>
         </div>
-        <div className="sum">
-          <div className="sum-text">
-            <h3>Arcade (Monthly)</h3>
-            <p>Change</p>
-          </div>
-          <div className="sum-price">$9/mo</div>
-        </div>
-        <div className="sum">
-          <div className="sum-text">
-            <h3>Arcade (Monthly)</h3>
-            <p>Change</p>
-          </div>
-          <div className="sum-price">$9/mo</div>
-        </div>
+
+        {pick.map((pic) => {
+          return (
+            <div className="sum">
+              <div className="sum-text">
+                <h3>{pic}</h3>
+                <button className="btn-change">Change</button>
+              </div>
+              <div className="sum-price">$9/mo</div>
+            </div>
+          )
+        })}
+
         <div className="sum" id="no-background">
           <div className="sum-text">
             <h3>Total (per Month)</h3>
@@ -40,7 +42,7 @@ const Summary = () => {
       <div className="btn-container">
         <div className="btn" style={{ marginTop: '50px' }}>
           <button id="go">Go Back</button>
-          <button onClick={() => navigate('finish')}>Confirm</button>
+          <button onClick={() => navigate('../finish')}>Confirm</button>
         </div>
       </div>
     </div>

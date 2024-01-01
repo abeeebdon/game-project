@@ -2,16 +2,21 @@ const Card = ({ pick, picks, user, setUser }) => {
   const { text, paragraph, id } = pick
 
   const handleCheck = (e) => {
-    const picked = picks.find((pick) => pick.id === id)
-    console.log(e.target.value)
-    if (user.pick) {
-      user.pick.push(picked.paragraph)
-    } else {
-      const addToUser = { ...user, pick: [picked.paragraph] }
-      setUser(addToUser)
-    }
+    if (e.target.value) {
+      const picked = picks.find((pick) => pick.id === id)
+      console.log(e.target.value)
+      if (user.pick) {
+        if (picked.paragraph === user.pick) {
+          return
+        }
+        user.pick.push(picked.paragraph)
+      } else {
+        const addToUser = { ...user, pick: [picked.paragraph] }
+        setUser(addToUser)
+      }
 
-    console.log(user)
+      console.log(user)
+    }
   }
 
   return (

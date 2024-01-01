@@ -1,4 +1,4 @@
-import Head from '../Components/Head'
+import Head from '../Head'
 import Forms from './Forms'
 const Home = ({ handleSubmit, handleChange, user, setUser }) => {
   return (

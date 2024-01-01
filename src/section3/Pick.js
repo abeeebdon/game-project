@@ -1,4 +1,4 @@
-import Head from '../Components/Head'
+import Head from '../Head'
 import { picks } from '../Data'
 import { useNavigate } from 'react-router-dom'
 import Card from './Card'

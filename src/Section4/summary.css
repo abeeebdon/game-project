@@ -14,3 +14,10 @@
 #no-background {
   background: none;
 }
+
+.btn-change {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import './section2/selectPlan.css'
 import './Aside/aside.css'
-import './sumContent.css'
 import './pick.css'
 import App from './App'
 

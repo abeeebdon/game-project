@@ -1,11 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
+import { useState } from 'react'
+
 import Home from './Home/Home'
 import Pick from './section3/Pick'
 import SelectPlan from './section2/SelectPlan'
-import Finish from './Components/Finish'
-import Error from './Components/Error'
+import Finish from './Section4/Finish'
+import Error from './Error'
 import Summary from './Section4/Summary'
-import { useState } from 'react'
 import Sidebar from './Aside/Sidebar'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     name: '',
     email: '',
     phoneNumber: '',
+    planPrice: '',
     duration: '',
     plan: '',
     pick: [],
@@ -47,7 +49,7 @@ function App() {
           element={<SelectPlan user={user} setUser={setUser} />}
         />
         <Route path="/pick" element={<Pick user={user} setUser={setUser} />} />
-        <Route path="/summary" element={<Summary />} />
+        <Route path="/summary" element={<Summary user={user} />} />
         <Route path="/finish" element={<Finish />} />
 
         <Route path="*" element={<Error />} />

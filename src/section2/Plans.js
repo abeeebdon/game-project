@@ -9,7 +9,12 @@ const Plans = ({ card, plans, user, setUser }) => {
     setToggle(!toggle)
     const game = plans.find((plan) => plan.id === id)
     console.log(game.duration)
-    const addUser = { ...user, duration: game.duration, plan: game.plan }
+    const addUser = {
+      ...user,
+      duration: game.duration,
+      plan: game.plan,
+      planPrice: game.amount,
+    }
     setUser(addUser)
     console.log(addUser)
   }

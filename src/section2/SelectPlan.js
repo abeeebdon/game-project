@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { monthPlan } from '../Data'
 import Plans from './Plans'
 import Select from './Select'
-import Head from '../Components/Head'
+import Head from '../Head'
 import { useNavigate } from 'react-router-dom'
 const SelectPlan = ({ user, setUser }) => {
   const [plans, setPlans] = useState([])
