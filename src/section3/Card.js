@@ -1,16 +1,22 @@
-const Card = ({ pick }) => {
+const Card = ({ pick, picks, user, setUser }) => {
   const { text, paragraph, id } = pick
 
   const handleCheck = (e) => {
-    console.log('checked')
+    const picked = picks.find((pick) => pick.id === id)
     console.log(e.target.value)
+    if (user.pick) {
+      user.pick.push(picked.paragraph)
+    } else {
+      const addToUser = { ...user, pick: [picked.paragraph] }
+      setUser(addToUser)
+    }
+
+    console.log(user)
   }
 
   return (
     <div className="add-item">
-      <button className="check">
-        <input type="checkbox" onChange={(e) => handleCheck(e)} />
-      </button>
+      <input type="checkbox" onChange={(e) => handleCheck(e)} />
       <div className="text">
         <h3 className="mblue">{text}</h3>
         <p>{paragraph}</p>

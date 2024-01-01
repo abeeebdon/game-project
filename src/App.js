@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
 import Home from './Home/Home'
-import Main from './Aside/Main'
 import Pick from './section3/Pick'
 import SelectPlan from './section2/SelectPlan'
 import Finish from './Components/Finish'
 import Error from './Components/Error'
-import Summary from './Components/Summary'
+import Summary from './Section4/Summary'
 import { useState } from 'react'
+import Sidebar from './Aside/Sidebar'
 
 function App() {
   const [user, setUser] = useState({
@@ -15,6 +15,7 @@ function App() {
     phoneNumber: '',
     duration: '',
     plan: '',
+    pick: [],
   })
 
   const handleChange = (e) => {
@@ -28,7 +29,7 @@ function App() {
   }
   return (
     <main>
-      <Main />
+      <Sidebar />
       <Routes>
         <Route
           path="/"
@@ -45,8 +46,7 @@ function App() {
           path="/select"
           element={<SelectPlan user={user} setUser={setUser} />}
         />
-        <Route path="/pick" element={<Pick />} />
-        <Route path="/pick/summary" element={<Summary />} />
+        <Route path="/pick" element={<Pick user={user} setUser={setUser} />} />
         <Route path="/summary" element={<Summary />} />
         <Route path="/finish" element={<Finish />} />
 

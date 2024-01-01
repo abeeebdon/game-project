@@ -44,7 +44,9 @@ const SelectPlan = ({ user, setUser }) => {
         <div>
           <p>
             There is an error, Please go back and enter your details{' '}
-            <button onClick={() => navigate('/')}>Go Back</button>
+            <button onClick={() => navigate('/')} className="button">
+              Go Back
+            </button>
           </p>
         </div>
       )}

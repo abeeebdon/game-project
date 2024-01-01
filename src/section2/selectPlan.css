@@ -9,8 +9,20 @@
   padding: 15px;
   border-radius: 10px;
   flex-basis: 30%;
+  transition: 1s;
 }
-.plan-item img {
+.plan-item-toggle {
+  border: 1px solid hsl(229, 24%, 87%);
+  padding: 15px;
+  border-radius: 10px;
+  flex-basis: 30%;
+  transition: 1s;
+  border: 2px solid blue;
+}
+.plan-item:hover {
+  border: 2px solid blue;
+}
+.plan-item-img {
   margin-top: 10px;
   margin-bottom: 20px;
 }
@@ -41,14 +53,32 @@
 .select-plan div {
   margin: 0 auto;
 }
-.click-btn {
+.indicator {
   display: inline-block;
+  position: relative;
 }
-.click-btn span {
+.position-left {
   padding-left: 2px;
   padding-right: 40px;
   background-color: hsl(213, 96%, 18%);
   color: white;
   font-size: 1rem;
   border-radius: 15px;
+}
+.position-right {
+  padding-right: 2px;
+  padding-left: 40px;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+
+.button {
+  padding: 0.5rem;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }

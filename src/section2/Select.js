@@ -1,10 +1,9 @@
 import { monthPlan, yearplan } from '../Data'
 const Select = ({ plans, setPlans }) => {
-  const handleClick = () => {
-    const change = yearplan
-    setPlans(change)
+  const handleYearly = () => {
+    setPlans(yearplan)
   }
-  const handleClick1 = () => {
+  const handleMonthly = () => {
     const change = monthPlan
     if (plans === change) {
       return
@@ -14,11 +13,15 @@ const Select = ({ plans, setPlans }) => {
   }
   return (
     <div className="select-plan">
-      <button onClick={() => handleClick1()}>Monthly</button>
-      <div className="click-btn">
-        <span>0</span>
+      <button onClick={() => handleMonthly()}>Monthly</button>
+      <div className="indicator">
+        <span
+          className={plans === yearplan ? 'position-right' : 'position-left'}
+        >
+          0
+        </span>
       </div>
-      <button onClick={() => handleClick()}>Yearly</button>
+      <button onClick={() => handleYearly()}>Yearly</button>
     </div>
   )
 }
