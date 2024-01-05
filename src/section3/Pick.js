@@ -2,6 +2,7 @@ import Head from '../Head'
 import { picks } from '../Data'
 import { useNavigate } from 'react-router-dom'
 import Card from './Card'
+import Button from '../Button'
 
 const Pick = ({ user, setUser }) => {
   const navigate = useNavigate()
@@ -28,11 +29,9 @@ const Pick = ({ user, setUser }) => {
               )
             })}
           </div>
-          <div className="btn" style={{ marginTop: '50px' }}>
-            <button id="go" onClick={() => navigate('../select')}>
-              Go Back
-            </button>
-            <button onClick={() => navigate('../summary')}>Next Step</button>
+          <div className="btn-container">
+            <Button btn="Go Back" position="left" target="plan" />
+            <Button btn="Next" position="right" target="summary" />
           </div>
         </>
       ) : (

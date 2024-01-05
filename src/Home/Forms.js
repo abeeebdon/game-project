@@ -45,15 +45,6 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           onChange={handleChange}
         />
       </div>
-      <div className="btn">
-        <button
-          type="submit"
-          className="button"
-          onClick={() => navigate('/select')}
-        >
-          Next Step
-        </button>
-      </div>
     </form>
   )
 }

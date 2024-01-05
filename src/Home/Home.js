@@ -1,3 +1,4 @@
+import Button from '../Button'
 import Head from '../Head'
 import Forms from './Forms'
 const Home = ({ handleSubmit, handleChange, user, setUser }) => {
@@ -14,6 +15,9 @@ const Home = ({ handleSubmit, handleChange, user, setUser }) => {
         user={user}
         setUser={setUser}
       />
+      <div className="btn-container">
+        <Button btn="Next" position="right" target="plan" />
+      </div>
     </div>
   )
 }

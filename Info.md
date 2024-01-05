@@ -17,3 +17,25 @@ The inputs are stored for use
 Here is the selction for monthly and yearly plan
 
 ####
+
+ <div className="btn">
+            <button id="go" onClick={() => navigate('/select')}>
+              Go Back
+            </button>
+            <button onClick={() => navigate('/pick')}>Next Step</button>
+          </div>
+
+            <div className="btn" style={{ marginTop: '50px' }}>
+            <button id="go" onClick={() => navigate('../select')}>
+              Go Back
+            </button>
+            <button onClick={() => navigate('../summary')}>Next Step</button>
+          </div>
+
+
+             <div className="btn-container">
+        <div className="btn" style={{ marginTop: '50px' }}>
+          <button id="go">Go Back</button>
+          <button onClick={() => navigate('../finish')}>Confirm</button>
+        </div>
+      </div>

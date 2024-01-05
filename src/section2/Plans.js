@@ -8,7 +8,6 @@ const Plans = ({ card, plans, user, setUser }) => {
   const handleClickk = (id) => {
     setToggle(!toggle)
     const game = plans.find((plan) => plan.id === id)
-    console.log(game.duration)
     const addUser = {
       ...user,
       duration: game.duration,

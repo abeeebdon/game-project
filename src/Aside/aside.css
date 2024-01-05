@@ -1,22 +1,24 @@
-.container {
+.aside-container {
   flex-basis: 25%;
-  border-radius: 10px;
-  min-height: 70vh;
+  border-radius: 0.7rem;
   background-image: url('../assets/images/bg-sidebar-desktop.svg');
   background-size: cover;
+  background-repeat: no-repeat;
   object-fit: cover;
 }
 .list {
-  padding: 15px;
-  padding-top: 20px;
+  padding: 1rem;
   display: flex;
-  gap: 15px;
+  flex-wrap: wrap;
   align-items: center;
+}
+
+.hide {
+  display: none;
 }
 a {
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 50%;
-  margin-left: 0.5rem;
   padding: 1rem;
   color: hsl(0, 0%, 100%);
 }
@@ -34,4 +36,34 @@ a.active {
 .sideName {
   color: hsl(229, 24%, 87%);
   margin: 2px;
+}
+
+@media only screen and (max-width: 600px) {
+  .aside-container {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    gap: 5%;
+    padding-top: 5vh;
+    height: 35%;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 0%;
+    align-items: flex-start;
+    background-image: url('../assets/images/bg-sidebar-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .list {
+    padding: 0%;
+  }
+  a {
+    margin: 0;
+    padding: 1rem;
+  }
+  .show,
+  .hide {
+    display: none;
+  }
 }

@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import Head from '../Head'
+import Button from '../Button'
 import './summary.css'
 const Summary = ({ user }) => {
   const { plan, planPrice, pick } = user
@@ -40,10 +41,7 @@ const Summary = ({ user }) => {
         </div>
       </div>
       <div className="btn-container">
-        <div className="btn" style={{ marginTop: '50px' }}>
-          <button id="go">Go Back</button>
-          <button onClick={() => navigate('../finish')}>Confirm</button>
-        </div>
+        <Button btn="Confirm" position="right" target="finish" />
       </div>
     </div>
   )

@@ -45,7 +45,7 @@ function App() {
           }
         />
         <Route
-          path="/select"
+          path="/plan"
           element={<SelectPlan user={user} setUser={setUser} />}
         />
         <Route path="/pick" element={<Pick user={user} setUser={setUser} />} />

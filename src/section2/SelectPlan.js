@@ -4,6 +4,7 @@ import Plans from './Plans'
 import Select from './Select'
 import Head from '../Head'
 import { useNavigate } from 'react-router-dom'
+import Button from '../Button'
 const SelectPlan = ({ user, setUser }) => {
   const [plans, setPlans] = useState([])
   useEffect(() => {
@@ -33,11 +34,9 @@ const SelectPlan = ({ user, setUser }) => {
             })}
           </div>
           <Select plans={plans} setPlans={setPlans} />
-          <div className="btn">
-            <button id="go" onClick={() => navigate('/select')}>
-              Go Back
-            </button>
-            <button onClick={() => navigate('/pick')}>Next Step</button>
+          <div className="btn-container">
+            <Button btn="Go Back" position="left" />
+            <Button btn="Next" position="right" target="pick" />
           </div>
         </>
       ) : (
