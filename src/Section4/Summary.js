@@ -24,7 +24,7 @@ const Summary = ({ user }) => {
 
         {picks.map((pic) => {
           return (
-            <div className="sum">
+            <div className="sum" key={pic.id}>
               <div className="sum-text">
                 <h3>{pic}</h3>
                 <button className="btn-change">Change</button>

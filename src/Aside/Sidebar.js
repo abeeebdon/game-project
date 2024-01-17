@@ -10,8 +10,10 @@ const Sidebar = () => {
         return (
           <div className="list" key={number}>
             <NavLink to={link}>{number}</NavLink>
-            <div className={width < 650 ? 'hide' : 'show'}>
-              <h5 className="head5">step{number}</h5>
+            <div>
+              <h5 className={width < 650 ? 'head5 hide' : 'head5 show'}>
+                step{number}
+              </h5>
               <p className="sideName">{name}</p>
             </div>
           </div>
