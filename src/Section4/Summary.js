@@ -1,10 +1,12 @@
-import { useNavigate } from 'react-router-dom'
 import Head from '../Head'
 import Button from '../Button'
 import './summary.css'
 const Summary = ({ user }) => {
   const { plan, planPrice, pick } = user
-  const navigate = useNavigate()
+
+  const pickSet = new Set(pick)
+  const picks = [...pickSet]
+
   return (
     <div className="wrapper">
       <Head
@@ -20,7 +22,7 @@ const Summary = ({ user }) => {
           <div className="sum-price">{planPrice}</div>
         </div>
 
-        {pick.map((pic) => {
+        {picks.map((pic) => {
           return (
             <div className="sum">
               <div className="sum-text">

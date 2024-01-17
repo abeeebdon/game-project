@@ -15,7 +15,6 @@ const Plans = ({ card, plans, user, setUser }) => {
       planPrice: game.amount,
     }
     setUser(addUser)
-    console.log(addUser)
   }
   return (
     <div
