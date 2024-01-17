@@ -1,7 +1,4 @@
-import { useNavigate } from 'react-router-dom'
 const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
-  const navigate = useNavigate()
-
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-row">
