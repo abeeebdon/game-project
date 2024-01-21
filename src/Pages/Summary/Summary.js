@@ -1,5 +1,5 @@
-import Head from '../Head'
-import Button from '../Button'
+import Head from '../../components/Head'
+import Button from '../../components/Button'
 import './summary.css'
 const Summary = ({ user }) => {
   const { plan, planPrice, pick } = user

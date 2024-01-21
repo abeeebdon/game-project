@@ -1,10 +1,10 @@
-import Head from '../Head'
-import { picks } from '../Data'
+import Head from '../../components/Head'
+import { picks } from '../../Data'
 import { useNavigate } from 'react-router-dom'
 import Card from './Card'
-import Button from '../Button'
+import Button from '../../components/Button'
 
-const Pick = ({ user, setUser }) => {
+const Index = ({ user, setUser }) => {
   const navigate = useNavigate()
 
   return (
@@ -47,4 +47,4 @@ const Pick = ({ user, setUser }) => {
     </div>
   )
 }
-export default Pick
+export default Index

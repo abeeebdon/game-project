@@ -1,4 +1,4 @@
-const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
+const Forms = ({ handleSubmit, user, handleChange }) => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form-row">
@@ -11,12 +11,10 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           placeholder="e.g. Stephen King"
           value={user.name}
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-row">
         <label htmlFor="email">Email Address</label>
-
         <input
           type="email"
           name="email"
@@ -25,12 +23,10 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           placeholder="e.g. king@gmail.com"
           value={user.email}
           onChange={handleChange}
-          required
         />
       </div>
       <div className="form-row">
         <label htmlFor="phoneNumber">Phone Number</label>
-
         <input
           type="text"
           name="phoneNumber"
@@ -38,7 +34,6 @@ const Forms = ({ handleSubmit, user, setUser, handleChange }) => {
           className="input"
           placeholder="e.g. +1 234 567 890"
           value={user.phoneNumber}
-          required
           onChange={handleChange}
         />
       </div>

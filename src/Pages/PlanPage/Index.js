@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
-import { monthPlan } from '../Data'
+import { monthPlan } from '../../Data'
 import Plans from './Plans'
 import Select from './Select'
-import Head from '../Head'
+import Head from '../../components/Head'
 import { useNavigate } from 'react-router-dom'
-import Button from '../Button'
-const SelectPlan = ({ user, setUser }) => {
+import Button from '../../components/Button'
+const Index = ({ user, setUser }) => {
   const [plans, setPlans] = useState([])
   useEffect(() => {
     setPlans(monthPlan)
   }, [])
   const navigate = useNavigate()
   return (
-    <div className="wrapper">
+    <>
       {user.name ? (
         <>
           <Head
@@ -40,16 +40,14 @@ const SelectPlan = ({ user, setUser }) => {
           </div>
         </>
       ) : (
-        <div>
+        <div className="error">
           <p>
             There is an error, Please go back and enter your details{' '}
-            <button onClick={() => navigate('/')} className="button">
-              Go Back
-            </button>
+            <button onClick={() => navigate('/')}>Go Back</button>
           </p>
         </div>
       )}
-    </div>
+    </>
   )
 }
-export default SelectPlan
+export default Index

@@ -2,9 +2,7 @@ import { BrowserRouter } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import './section2/selectPlan.css'
-import './Aside/aside.css'
-import './pick.css'
+
 import App from './App'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))

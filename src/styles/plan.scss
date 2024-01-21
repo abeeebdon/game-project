@@ -1,0 +1,89 @@
+.plan {
+  display: flex;
+  margin: 1rem 0px;
+  gap: 0.5rem;
+  justify-content: space-between;
+  .plan-item {
+    border: 1px solid hsl(229, 24%, 87%);
+    padding: 1rem;
+    border-radius: 10px;
+    flex-basis: 30%;
+    transition: 1s;
+    &:hover {
+      border: 2px solid blue;
+    }
+  }
+  .plan-item-toggle {
+    border: 1px solid hsl(229, 24%, 87%);
+    padding: 1rem;
+    border-radius: 10px;
+    flex-basis: 30%;
+    transition: 1s;
+    border: 2px solid blue;
+  }
+  .img {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    color: hsl(213, 96%, 18%);
+    margin: 10px 0px 5px 0px;
+  }
+  .free {
+    margin-top: 5px;
+    color: blue;
+  }
+}
+
+.select-plan {
+  margin: 2rem 0px;
+  padding-top: 10px;
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  button {
+    background: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin: 0px 5px;
+  }
+  .indicator {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+
+    .left {
+      padding-left: 2px;
+      padding-right: 40px;
+      background-color: hsl(213, 96%, 18%);
+      color: white;
+      font-size: 1rem;
+      border-radius: 15px;
+    }
+    .right {
+      padding-right: 2px;
+      padding-left: 40px;
+      background-color: hsl(213, 96%, 18%);
+      color: white;
+      font-size: 1rem;
+      border-radius: 15px;
+    }
+  }
+}
+.error {
+  margin-top: 4rem;
+  p {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  button {
+    margin: 1rem;
+    padding: 0.7rem;
+    color: white;
+    background-color: red;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+}

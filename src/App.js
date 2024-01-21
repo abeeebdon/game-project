@@ -1,12 +1,11 @@
 import { Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
-
-import Home from './Home/Home'
-import Pick from './section3/Pick'
-import SelectPlan from './section2/SelectPlan'
-import Finish from './Section4/Finish'
-import Error from './Error'
-import Summary from './Section4/Summary'
+import Home from './Pages/Home/Index'
+import Pick from './Pages/PickPage/Index'
+import Plan from './Pages/PlanPage/Index'
+import Finish from './Pages/Summary/Finish'
+import Summary from './Pages/Summary/Summary'
+import Error from './components/Error'
 import Sidebar from './Aside/Sidebar'
 
 function App() {
@@ -30,28 +29,32 @@ function App() {
   return (
     <main>
       <Sidebar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home
-              handleSubmit={handleSubmit}
-              handleChange={handleChange}
-              user={user}
-              setUser={setUser}
-            />
-          }
-        />
-        <Route
-          path="/plan"
-          element={<SelectPlan user={user} setUser={setUser} />}
-        />
-        <Route path="/pick" element={<Pick user={user} setUser={setUser} />} />
-        <Route path="/summary" element={<Summary user={user} />} />
-        <Route path="/finish" element={<Finish />} />
-
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <div className="wrapper">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home
+                handleSubmit={handleSubmit}
+                handleChange={handleChange}
+                user={user}
+                setUser={setUser}
+              />
+            }
+          />
+          <Route
+            path="/plan"
+            element={<Plan user={user} setUser={setUser} />}
+          />
+          <Route
+            path="/pick"
+            element={<Pick user={user} setUser={setUser} />}
+          />
+          <Route path="/summary" element={<Summary user={user} />} />
+          <Route path="/finish" element={<Finish />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </div>
     </main>
   )
 }

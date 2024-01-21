@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { yearplan } from '../Data'
+import { yearplan } from '../../Data'
 
 const Plans = ({ card, plans, user, setUser }) => {
   const { image, plan, amount, id } = card
@@ -21,13 +21,13 @@ const Plans = ({ card, plans, user, setUser }) => {
       className={toggle ? 'plan-item' && 'plan-item-toggle' : 'plan-item'}
       onClick={() => handleClickk(id)}
     >
-      <img src={image} alt="Arcade" className="plan-item-img" />
+      <img src={image} alt="Arcade" className="img" />
       <h3>{plan}</h3>
       <p>{amount}</p>
       {plans === yearplan ? (
         <p className="free">2 months free</p>
       ) : (
-        <p style={{ display: 'none' }}></p>
+        <p style={{ visibility: 'hidden' }}>no months free</p>
       )}
     </div>
   )

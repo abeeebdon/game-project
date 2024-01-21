@@ -1,4 +1,4 @@
-import { monthPlan, yearplan } from '../Data'
+import { monthPlan, yearplan } from '../../Data'
 const Select = ({ plans, setPlans }) => {
   const handleYearly = () => {
     setPlans(yearplan)
@@ -15,11 +15,7 @@ const Select = ({ plans, setPlans }) => {
     <div className="select-plan">
       <button onClick={() => handleMonthly()}>Monthly</button>
       <div className="indicator">
-        <span
-          className={plans === yearplan ? 'position-right' : 'position-left'}
-        >
-          0
-        </span>
+        <span className={plans === yearplan ? 'right' : 'left'}>0</span>
       </div>
       <button onClick={() => handleYearly()}>Yearly</button>
     </div>
