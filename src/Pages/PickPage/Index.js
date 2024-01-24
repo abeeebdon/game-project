@@ -8,7 +8,7 @@ const Index = ({ user, setUser }) => {
   const navigate = useNavigate()
 
   return (
-    <div className="wrapper">
+    <>
       {user.duration ? (
         <>
           <Head
@@ -44,7 +44,7 @@ const Index = ({ user, setUser }) => {
           </p>
         </div>
       )}
-    </div>
+    </>
   )
 }
 export default Index

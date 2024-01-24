@@ -42,30 +42,23 @@ a.active {
 
 @media only screen and (max-width: 600px) {
   .aside-container {
-    text-align: center;
     width: 100%;
     display: flex;
-    gap: 5%;
-    padding-top: 5vh;
-    height: 35%;
+    height: 30vh;
     justify-content: center;
-    flex-wrap: wrap;
     border: none;
     border-radius: 0%;
     align-items: flex-start;
+    padding-top: 5vh;
     background-image: url('../assets/images/bg-sidebar-mobile.svg');
     background-size: cover;
     background-repeat: no-repeat;
   }
   .list {
-    padding: 0%;
+    padding: 1rem;
   }
   a {
     margin: 0;
     padding: 1rem;
-  }
-  .show,
-  .hide {
-    display: none;
   }
 }

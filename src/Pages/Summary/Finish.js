@@ -1,6 +1,6 @@
 const Finish = () => {
   return (
-    <div class="wrapper relative">
+    <>
       <div class="thanks">
         <img src="./assets/images/icon-thank-you.svg" alt="" />
         <h3 class="mblue">Thank you!</h3>
@@ -10,7 +10,7 @@ const Finish = () => {
           at abeebdon@gmail.com
         </p>
       </div>
-    </div>
+    </>
   )
 }
 export default Finish

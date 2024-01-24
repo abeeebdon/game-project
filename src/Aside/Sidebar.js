@@ -14,7 +14,9 @@ const Sidebar = () => {
               <h5 className={width < 650 ? 'head5 hide' : 'head5 show'}>
                 step{number}
               </h5>
-              <p className="sideName">{name}</p>
+              <p className={width < 650 ? 'sideName hide' : 'sideName show'}>
+                {name}
+              </p>
             </div>
           </div>
         )
