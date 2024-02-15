@@ -18,9 +18,10 @@ function App() {
     plan: '',
     pick: [],
   })
-
+  console.log(user)
   const handleChange = (e) => {
     const updatedUsers = { ...user, [e.target.name]: e.target.value }
+    // e,target,name e, target,value
     setUser(updatedUsers)
   }
   const handleSubmit = (e) => {

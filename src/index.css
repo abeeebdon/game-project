@@ -3,6 +3,7 @@
 @import url('./styles/pick.scss');
 @import url('./styles/plan.scss');
 @import url('./styles/recur.scss');
+@import url('./styles/summary.scss');
 * {
   margin: 0;
   padding: 0;
@@ -47,6 +48,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.finish {
+  text-align: center;
 }
 
 /* for purplish blue */

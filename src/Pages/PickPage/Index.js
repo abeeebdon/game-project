@@ -35,7 +35,7 @@ const Index = ({ user, setUser }) => {
           </div>
         </>
       ) : (
-        <div>
+        <div className="error">
           <p>
             There is an error, Please go back and enter your details{' '}
             <button onClick={() => navigate('../select')} className="button">

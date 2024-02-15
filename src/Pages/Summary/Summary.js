@@ -1,6 +1,5 @@
 import Head from '../../components/Head'
 import Button from '../../components/Button'
-import './summary.css'
 const Summary = ({ user }) => {
   const { plan, planPrice, pick } = user
 
@@ -8,7 +7,7 @@ const Summary = ({ user }) => {
   const picks = [...pickSet]
 
   return (
-    <div className="wrapper">
+    <>
       <Head
         head="Finishing Up"
         paragraph="Double-check everything looks OK before confirming"
@@ -24,7 +23,7 @@ const Summary = ({ user }) => {
 
         {picks.map((pic) => {
           return (
-            <div className="sum" key={pic.id}>
+            <div className="sum" key={pic}>
               <div className="sum-text">
                 <h3>{pic}</h3>
                 <button className="btn-change">Change</button>
@@ -45,7 +44,7 @@ const Summary = ({ user }) => {
       <div className="btn-container">
         <Button btn="Confirm" position="right" target="finish" />
       </div>
-    </div>
+    </>
   )
 }
 export default Summary
